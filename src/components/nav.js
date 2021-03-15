@@ -1,10 +1,23 @@
+import React, {useState} from "react";
 import {
     Link
   } from "react-router-dom";
+import {Form} from 'react-bootstrap';
+import "./nav.css";
+import { useHistory } from "react-router-dom";
 
-import "./nav.css"
+export default function Nav(props) {
+    const [categoryValue, setCategoryValue] = useState("Template 1");
+    const history = useHistory();
+      if(categoryValue==="Social Innovation"){
+      history.push("/social-innovation");
+      }else{
+        history.push("/")
+      }
 
-export default function Nav() {
+    const all = () => {
+        history.push("/")
+    }  
     return (
     <nav className="Nav">
         <ul className="links">
@@ -18,5 +31,17 @@ export default function Nav() {
         </li>
         </ul>
         </ul>
+        <div className="filterContainer">
+            <button onClick={()=>all()}>All</button>
+            <Form.Group >
+                <Form.Control as="select" size="sm" onChange={(event)=>setCategoryValue(event.target.value)}>
+                    <option value="title">Select</option>
+                    <option value="Social Innovation">Social Innovation</option>
+                    <option value="1">Template 1</option>
+                    <option value="2">Template 2</option>
+                    <option value="3">Template 3</option>
+            </Form.Control>
+            </Form.Group>
+        </div>
     </nav>);
   }

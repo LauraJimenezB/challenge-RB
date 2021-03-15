@@ -95,9 +95,6 @@ export default function Social() {
     
     return (
     <div>
-        <header>
-            <h2>Select Builder Schedule - 2021 Fall Cohort</h2>
-        </header>
         <main>
             <section>
                 <div className="title">
@@ -111,7 +108,7 @@ export default function Social() {
                     return(
                     <div draggable onDragStart={(e)=>handleDragStart(e, {itemI})} 
                     onDragEnter={dragging?(e)=>handleDragEnter(e, {itemI}):null} key={item.id} 
-                    className={dragging?getStyles({itemI}):"dnd-item"}>
+                    className={item.checked?"dnd-item-selected":"dnd-item"}>
                         <div className={item.checked ? "selectedItem": "item"} onClick={(e)=>handleChange(e, item.nombre)}>
                             <input type="radio" checked={item.checked} onChange={(e)=>handleChange(e, item.nombre)}/>
                             <div className="item-box">

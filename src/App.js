@@ -12,18 +12,23 @@ import "./App.css";
 export default function App() {
   return (
     <Router>
-      <div className="flex-row">
+      <div>
+        <header>
+            <h2>Select Builder Schedule - 2021 Fall Cohort</h2>
+        </header>
+        <div className="flex-row">
         <Nav/>
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/social-innovation">
-            <Social />
+            <Social/>
           </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
+      </div>
       </div>
     </Router>
   );

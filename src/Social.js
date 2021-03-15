@@ -56,9 +56,6 @@ export default function Social() {
     
     return (
     <div>
-        <header>
-            <h2>Select Builder Schedule - 2021 Fall Cohort</h2>
-        </header>
         <main>
             <section>
                 <div className="title">

@@ -1,10 +1,16 @@
 .Nav{
-    width: 15vw;
+    max-width: 15vw;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   
 .links{
     list-style: none;
+    width: 15vw;
+    padding: 0%;
+    padding: 5px;
 }
 
 .links li{
@@ -20,3 +26,5 @@
     color: black;
     font-weight: bold;
 }
+
+

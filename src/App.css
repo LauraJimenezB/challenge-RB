@@ -3,6 +3,10 @@
   flex-direction: row;
 }
 
+header{
+  margin-left: 15vw;
+}
+
 main{
   width: 80vw;
   padding: 15px;
@@ -11,6 +15,10 @@ main{
   border-color: rgb(192, 191, 191);
   border-width: 1.5px;
   border-style: solid;
+}
+
+section{
+  width: 100%;
 }
 
 .title{
@@ -28,11 +36,18 @@ main{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 35%;
+  width: 40%;
 }
 
 
 .dnd-item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.dnd-item-selected{
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -120,6 +135,7 @@ main{
   height: 40px;
   margin-top: auto;
   margin-bottom: auto;
+  flex-wrap: wrap;
 }
 
 button{
@@ -128,4 +144,92 @@ button{
   border-style: hidden;
   outline: none;
   font-weight: bold;
+}
+
+.filterContainer{
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .item{
+    width: 60%;
+  }
+  .selectedItem{
+    width: 60%;
+  }
+  .filterContainer{
+    display: none;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .flex-row{
+    flex-direction: column;
+  }
+  header{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  main{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .dnd-item{
+    flex-direction: column;
+  }
+  .item{
+    width: 100%;
+  }
+  .selectedItem{
+    width: 100%;
+  }
+  .dnd-item{
+    border-style: solid;
+    margin-bottom: 15px;
+    border-color: white;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    height: 200px;
+  }
+  .dnd-item-selected{
+    border-style: solid;
+    margin-bottom: 15px;
+    border-color: rgb(43, 148, 148);
+    border-radius: 5px;
+    flex-wrap: wrap;
+    height: 200px;
+  }
+  .selectedItem .item-box{
+    border-color: white;
+  }
+  .item-box{
+    box-shadow: none;
+  }
+  .date-time{
+    width: 80vw;
+  }
+  .show{
+    height: 90px;
+  }
+  section p{
+    display: none;
+  }
+  .flex-row-btn{
+    width: 80vw;
+  }
+  .filterContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  .links{
+    display: none;
+  }
+  .Nav{
+    width: 70vw;
+    margin:15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
