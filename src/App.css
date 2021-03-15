@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+.flex-row{
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main{
+  width: 80vw;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-color: rgb(192, 191, 191);
+  border-width: 1.5px;
+  border-style: solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0%;
+  height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-row-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 35%;
+}
+
+
+.dnd-item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.item{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  width: 55%;
+}
+
+.selectedItem{
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  width: 55%;
+}
+
+.selectedItem .item-box{
+  border-style: solid;
+  border-color: rgb(43, 148, 148);
+  width: 55%;
+}
+
+.selectedItem .item-text label{
+  color: black;
+}
+
+.item-box{
+  width: 55%;
+  height: 60px;
+  border-style: hidden;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgb(139, 138, 138);
+}
+
+.item-text{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 400px;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.item-text label{
+  font-size: 15px;
+  font-weight: bold;
+  color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-text span{
+  font-size: 12px;
+  color: rgb(66, 66, 134);
+}
+
+.item-box img{
+  height: 60px;
+}
+
+.hidden{
+  display: none;
+}
+
+.show{
+  display: flex;
+  flex-direction: row;
+}
+
+.current{
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.date-time{
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  justify-content: space-between;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+button{
+  background-color: white;
+  color: rgb(43, 148, 148);
+  border-style: hidden;
+  outline: none;
+  font-weight: bold;
 }

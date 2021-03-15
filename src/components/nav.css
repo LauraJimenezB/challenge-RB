@@ -1,0 +1,22 @@
+.Nav{
+    width: 15vw;
+    margin-top: 60px;
+  }
+  
+.links{
+    list-style: none;
+}
+
+.links li{
+    padding: 10px;
+}
+
+.link li:hover{
+    background-color: rgb(194, 191, 191);
+}
+
+.links li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
